@@ -17,9 +17,22 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: "https://www.eventnestbanquet.in/about" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://www.eventnestbanquet.in/about" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eventnestbanquet.in/" },
+            { "@type": "ListItem", "position": 2, "name": "The Story", "item": "https://www.eventnestbanquet.in/about" }
+          ]
+        })
+      }
+    ],
   }),
   component: About,
 });
