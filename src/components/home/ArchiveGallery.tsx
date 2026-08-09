@@ -71,12 +71,12 @@ export function ArchiveGallery({ heading = "The archive", chapter = "10" as stri
           ))}
         </div>
 
-        <div className="mt-10 grid grid-flow-row-dense grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+        <div className="mt-10 grid grid-flow-row-dense grid-cols-2 auto-rows-[220px] gap-4 sm:gap-6 lg:grid-cols-4 lg:auto-rows-[300px] xl:auto-rows-[340px]">
           {items.map((item) => (
             <figure
               key={item.id}
               data-tile
-              className={`group relative overflow-hidden opacity-0 ${
+              className={`group relative h-full w-full overflow-hidden opacity-0 ${
                 item.span === "wide" ? "col-span-2" : ""
               } ${item.span === "tall" ? "row-span-2" : ""}`}
             >
@@ -93,9 +93,7 @@ export function ArchiveGallery({ heading = "The archive", chapter = "10" as stri
                   loading="lazy"
                   width={1400}
                   height={1000}
-                  className={`w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.03] ${
-                    item.span === "tall" ? "aspect-[3/4] h-full" : item.span === "wide" ? "aspect-[16/9]" : "aspect-square"
-                  }`}
+                  className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.03]"
                 />
                 <span className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-3 bg-charcoal/40 p-4 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 border-t border-ivory/20">
                   <span className="label block !text-ivory">{item.caption}</span>
