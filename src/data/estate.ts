@@ -6,32 +6,29 @@
  * archive material (dates, provenance, room specs) before launch — every field
  * maps 1:1 to what is rendered.
  */
-import heroEstate from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_55__1_.webp";
-import courtyard from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_55.webp";
-import grandHall from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56__1_.webp";
-import terrace from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56__2_.webp";
-import garden from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56__3_.webp";
-import room1 from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56__4_.webp";
-import room2 from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56__5_.webp";
-import room3 from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56__6_.webp";
-import dining from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56.webp";
-import celebration from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56__1_.webp";
-import detailBrass from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_55__1_.webp";
-import detailCarving from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_55__1_.webp";
+import facadeNight from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_55__1_.webp";
+import buffetSetup from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_55.webp";
+import entranceGate from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56.webp";
+import entranceNight from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56__1_.webp";
+import weddingStage from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56__2_.webp";
+import hotelRoom from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56__3_.webp";
+import seatingTable from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56__4_.webp";
+import buffetDetails from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56__5_.webp";
+import grandHallSeating from "@/assets/Event/whatsapp_image_2026_08_08_at_15_18_56__6_.webp";
 
 export const images = {
-  heroEstate,
-  courtyard,
-  grandHall,
-  terrace,
-  garden,
-  room1,
-  room2,
-  room3,
-  dining,
-  celebration,
-  detailBrass,
-  detailCarving,
+  heroEstate: facadeNight,
+  courtyard: entranceGate,
+  grandHall: grandHallSeating,
+  terrace: entranceNight,
+  garden: entranceGate,
+  room1: hotelRoom,
+  room2: hotelRoom,
+  room3: hotelRoom,
+  dining: buffetSetup,
+  celebration: weddingStage,
+  detailBrass: buffetDetails,
+  detailCarving: seatingTable,
 };
 
 export const estate = {
@@ -224,15 +221,15 @@ export type GalleryItem = {
 };
 
 export const gallery: GalleryItem[] = [
-  { id: "g1", category: "Architecture", caption: "The Event Nest facade", year: "2024", image: heroEstate, span: "wide", featured: true },
-  { id: "g2", category: "Architecture", caption: "The grand hall", year: "2024", image: grandHall, span: "tall", featured: true },
-  { id: "g3", category: "Architecture", caption: "Courtyard view", year: "2024", image: courtyard, featured: true },
-  { id: "g4", category: "Rooms", caption: "The Premium Deluxe Suite", year: "2024", image: room1, featured: true },
-  { id: "g5", category: "Architecture", caption: "The garden area", year: "2024", image: garden, featured: true },
-  { id: "g6", category: "People", caption: "The terrace at dusk", year: "Today", image: terrace, span: "wide" },
-  { id: "g7", category: "Rooms", caption: "The Classic Chamber", year: "2024", image: room2 },
-  { id: "g8", category: "Rooms", caption: "The Family Suite", year: "2024", image: room3 },
-  { id: "g9", category: "Dining", caption: "The dining setup", year: "Today", image: dining, featured: true },
+  { id: "g1", category: "Architecture", caption: "The Event Nest facade", year: "2024", image: facadeNight, span: "wide", featured: true },
+  { id: "g2", category: "Architecture", caption: "The grand entrance", year: "2024", image: entranceNight, span: "tall", featured: true },
+  { id: "g3", category: "Architecture", caption: "Courtyard view", year: "2024", image: entranceGate, featured: true },
+  { id: "g4", category: "Rooms", caption: "The Premium Deluxe Suite", year: "2024", image: hotelRoom, featured: true },
+  { id: "g5", category: "Architecture", caption: "The grand hall", year: "2024", image: grandHallSeating, featured: true },
+  { id: "g6", category: "Celebrations", caption: "Wedding stage setup", year: "Today", image: weddingStage, span: "wide" },
+  { id: "g7", category: "Details", caption: "Elegant seating", year: "2024", image: seatingTable },
+  { id: "g8", category: "Details", caption: "Buffet details", year: "2024", image: buffetDetails },
+  { id: "g9", category: "Dining", caption: "The buffet setup", year: "Today", image: buffetSetup, featured: true },
 ];
 
 export const galleryFilters = ["All", "Architecture", "Rooms", "Dining", "Celebrations", "People", "Details"] as const;
