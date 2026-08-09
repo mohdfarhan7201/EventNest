@@ -225,9 +225,9 @@ export type GalleryItem = {
 
 export const gallery: GalleryItem[] = [
   { id: "g1", category: "Architecture", caption: "The Event Nest facade", year: "2024", image: heroEstate, span: "wide", featured: true },
-  { id: "g2", category: "Rooms", caption: "The Premium Deluxe Suite", year: "2024", image: room1, span: "tall", featured: true },
+  { id: "g2", category: "Architecture", caption: "The grand hall", year: "2024", image: grandHall, span: "tall", featured: true },
   { id: "g3", category: "Architecture", caption: "Courtyard view", year: "2024", image: courtyard, featured: true },
-  { id: "g4", category: "Architecture", caption: "The grand hall", year: "2024", image: grandHall, featured: true },
+  { id: "g4", category: "Rooms", caption: "The Premium Deluxe Suite", year: "2024", image: room1, featured: true },
   { id: "g5", category: "Architecture", caption: "The garden area", year: "2024", image: garden, featured: true },
   { id: "g6", category: "People", caption: "The terrace at dusk", year: "Today", image: terrace, span: "wide" },
   { id: "g7", category: "Rooms", caption: "The Classic Chamber", year: "2024", image: room2 },
