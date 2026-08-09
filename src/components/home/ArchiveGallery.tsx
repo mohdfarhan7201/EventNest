@@ -4,11 +4,15 @@ import { useGsapContext, gsap, revealHeading } from "@/lib/anim";
 import { gallery, galleryFilters, type GalleryItem } from "@/data/estate";
 import { ChapterMark, Section } from "@/components/site/Chapter";
 
-export function ArchiveGallery({ heading = "The archive", chapter = "10" as string | null }) {
+export function ArchiveGallery({ heading = "The archive", chapter = "10" as string | null, featuredOnly = false }) {
   const [filter, setFilter] = useState<string>("All");
   const [lightbox, setLightbox] = useState<GalleryItem | null>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
-  const items = gallery.filter((g) => filter === "All" || g.category === filter);
+  const items = gallery.filter((g) => {
+    const matchesFilter = filter === "All" || g.category === filter;
+    const matchesFeatured = featuredOnly ? g.featured : true;
+    return matchesFilter && matchesFeatured;
+  });
 
   const ref = useGsapContext<HTMLDivElement>(({ root, reduced }) => {
     const h = root.querySelector<HTMLElement>("[data-heading]");
@@ -67,7 +71,7 @@ export function ArchiveGallery({ heading = "The archive", chapter = "10" as stri
           ))}
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+        <div className="mt-10 grid grid-flow-row-dense grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
           {items.map((item) => (
             <figure
               key={item.id}
@@ -89,11 +93,11 @@ export function ArchiveGallery({ heading = "The archive", chapter = "10" as stri
                   loading="lazy"
                   width={1400}
                   height={1000}
-                  className={`w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.06] ${
+                  className={`w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.03] ${
                     item.span === "tall" ? "aspect-[3/4] h-full" : item.span === "wide" ? "aspect-[16/9]" : "aspect-square"
                   }`}
                 />
-                <span className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-3 bg-gradient-to-t from-charcoal/85 to-transparent p-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100">
+                <span className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-3 bg-charcoal/40 p-4 opacity-0 backdrop-blur-md transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 border-t border-ivory/20">
                   <span className="label block !text-ivory">{item.caption}</span>
                   <span className="label mt-1 block !text-brass">{item.category} — {item.year}</span>
                 </span>

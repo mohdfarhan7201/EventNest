@@ -44,7 +44,7 @@ function Index() {
       <DiningSection />
       <CelebrationSection />
       <ExperienceSection />
-      <ArchiveGallery />
+      <ArchiveGallery featuredOnly={true} />
       <TestimonialStory />
       <FinalInvitation />
       <NearbyLocations />

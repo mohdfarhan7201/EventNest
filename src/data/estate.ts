@@ -220,20 +220,21 @@ export type GalleryItem = {
   year: string;
   image: string;
   span?: "tall" | "wide";
+  featured?: boolean;
 };
 
 export const gallery: GalleryItem[] = [
-  { id: "g1", category: "Architecture", caption: "The east facade at dusk", year: "2024", image: heroEstate, span: "wide" },
+  { id: "g1", category: "Architecture", caption: "The east facade at dusk", year: "2024", image: heroEstate, span: "wide", featured: true },
   { id: "g2", category: "Architecture", caption: "Courtyard colonnade", year: "2024", image: courtyard },
-  { id: "g3", category: "Details", caption: "Brass details", year: "2024", image: detailBrass },
-  { id: "g4", category: "Rooms", caption: "The Premium Deluxe Suite", year: "2024", image: room1, span: "tall" },
+  { id: "g3", category: "Details", caption: "Brass details", year: "2024", image: detailBrass, featured: true },
+  { id: "g4", category: "Rooms", caption: "The Premium Deluxe Suite", year: "2024", image: room1, span: "tall", featured: true },
   { id: "g5", category: "Dining", caption: "The long table, laid", year: "Today", image: dining },
-  { id: "g6", category: "Celebrations", caption: "Courtyard set for a wedding", year: "Today", image: celebration, span: "wide" },
+  { id: "g6", category: "Celebrations", caption: "Courtyard set for a wedding", year: "Today", image: celebration, span: "wide", featured: true },
   { id: "g7", category: "Details", caption: "Carved panel details", year: "2024", image: detailCarving, span: "tall" },
-  { id: "g8", category: "Architecture", caption: "The grand hall", year: "2024", image: grandHall },
+  { id: "g8", category: "Architecture", caption: "The grand hall", year: "2024", image: grandHall, featured: true },
   { id: "g9", category: "Rooms", caption: "The Classic Chamber", year: "2024", image: room2 },
   { id: "g10", category: "People", caption: "The terrace, late season", year: "Today", image: terrace },
-  { id: "g11", category: "Architecture", caption: "The garden area", year: "2024", image: garden, span: "wide" },
+  { id: "g11", category: "Architecture", caption: "The garden area", year: "2024", image: garden, span: "wide", featured: true },
   { id: "g12", category: "Rooms", caption: "The Family Suite", year: "2024", image: room3 },
 ];
 
