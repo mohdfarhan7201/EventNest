@@ -8,13 +8,14 @@ export function Footer() {
       {/* SVG Wave Separator */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-0 transform -translate-y-[99%]">
         <svg 
-          className="relative block w-full h-[50px] sm:h-[80px] lg:h-[120px]" 
+          className="relative block w-full h-[50px] sm:h-[100px]" 
+          data-name="Layer 1" 
           xmlns="http://www.w3.org/2000/svg" 
-          viewBox="0 0 1440 120" 
+          viewBox="0 0 1200 120" 
           preserveAspectRatio="none"
         >
           <path 
-            d="M0,60 C480,120 960,0 1440,60 L1440,120 L0,120 Z" 
+            d="M0,60 C400,120 800,0 1200,60 L1200,120 L0,120 Z" 
             className="fill-[#0d0d0d]"
           ></path>
         </svg>
