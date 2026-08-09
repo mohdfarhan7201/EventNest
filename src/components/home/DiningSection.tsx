@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useGsapContext, gsap, revealHeading } from "@/lib/anim";
-import { diningVenues, diningWords, images } from "@/data/estate";
+import { diningWords, images } from "@/data/estate";
 import { ChapterMark } from "@/components/site/Chapter";
 
 export function DiningSection() {
@@ -38,11 +38,6 @@ export function DiningSection() {
         scrollTrigger: { trigger: frame, start: "top bottom", end: "bottom top", scrub: true },
       });
     }
-
-    gsap.from(root.querySelectorAll("[data-venue]"), {
-      opacity: 0, y: 34, duration: 0.9, stagger: 0.1, ease: "power2.out",
-      scrollTrigger: { trigger: root.querySelector("[data-venues]"), start: "top 85%" },
-    });
   });
 
   return (
@@ -78,31 +73,6 @@ export function DiningSection() {
           <figcaption className="label mt-4">One seating. One menu. Served at twenty hundred hours.</figcaption>
         </figure>
 
-        <div data-venues className="mt-20 grid gap-10 md:grid-cols-3">
-          {diningVenues.map((venue) => (
-            <article key={venue.id} data-venue className="border-t border-border pt-6 opacity-0">
-              <div className="overflow-hidden">
-                <img
-                  src={venue.image}
-                  alt={venue.name}
-                  loading="lazy"
-                  width={1400}
-                  height={1000}
-                  className="aspect-[5/4] w-full object-cover transition-transform duration-[1.2s] ease-out hover:scale-[1.04]"
-                />
-              </div>
-              <h3 className="display mt-6 text-2xl">{venue.name}</h3>
-              <dl className="mt-4 space-y-2 text-sm text-muted-foreground">
-                <div className="flex gap-3"><dt className="label w-20 shrink-0">Cuisine</dt><dd>{venue.cuisine}</dd></div>
-                <div className="flex gap-3"><dt className="label w-20 shrink-0">Room</dt><dd>{venue.atmosphere}</dd></div>
-                <div className="flex gap-3"><dt className="label w-20 shrink-0">Hours</dt><dd>{venue.hours}</dd></div>
-              </dl>
-              <Link to="/dining" data-cursor="Open" className="label mt-6 inline-flex border-b border-current pb-1 transition-colors hover:text-brass">
-                Reserve the table
-              </Link>
-            </article>
-          ))}
-        </div>
       </div>
     </section>
   );
