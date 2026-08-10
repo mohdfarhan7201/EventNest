@@ -18,7 +18,7 @@ export function DetailsGallery() {
       figures,
       {
         clipPath: "inset(100% 0% 0% 0%)",
-        y: 40,
+        y: 60,
         opacity: 0,
       },
       {
@@ -26,18 +26,18 @@ export function DetailsGallery() {
         y: 0,
         opacity: 1,
         duration: 1.6,
-        ease: "power4.out",
+        ease: "power3.out",
         stagger: 0.15,
         scrollTrigger: {
-          trigger: root.querySelector(".grid"),
-          start: "top 80%",
+          trigger: root,
+          start: "top 75%",
         },
       }
     );
 
     figures.forEach((fig, i) => {
       // Gentle parallax on each image to keep it dynamic
-      parallax(fig.querySelector("img"), reduced, 8);
+      parallax(fig.querySelector("img"), reduced, 12);
     });
   });
 
@@ -49,10 +49,16 @@ export function DetailsGallery() {
           It is in the details.
         </h2>
 
-        {/* Tight grid layout for less space, group for hover animations */}
-        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {details.map((d) => (
-            <figure key={d.caption} data-detail className="group opacity-0 relative overflow-hidden">
+        {/* Tight grid layout for less space, group for hover animations, subtle stagger for premium feel */}
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 pb-12">
+          {details.map((d, i) => (
+            <figure
+              key={d.caption}
+              data-detail
+              className={`group opacity-0 relative overflow-hidden ${
+                i % 2 !== 0 ? "lg:mt-16" : ""
+              }`}
+            >
               <div className="overflow-hidden">
                 <img
                   src={d.image}
@@ -60,8 +66,8 @@ export function DetailsGallery() {
                   loading="lazy"
                   width={1000}
                   height={1200}
-                  // Clean, square-ish aspect ratio with smooth hover zoom
-                  className="aspect-[4/5] w-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
+                  // Clean, slightly taller aspect ratio with smooth hover zoom
+                  className="aspect-[3/4] w-full scale-110 object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-125"
                 />
               </div>
               <figcaption className="mt-5 flex flex-col gap-1 border-t border-border/60 pt-4">
