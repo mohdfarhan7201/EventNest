@@ -70,7 +70,7 @@ export function Footer() {
 
         <div className="mt-20 pt-8 border-t border-white/10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between text-xs text-gray-500">
           <p className="text-center sm:text-left">© {new Date().getFullYear()} {estate.name}. All rights reserved.</p>
-          <p className="text-center sm:text-right">Premium Banquet Hall & Deluxe Rooms — Gorakhpur, India</p>
+          <p className="text-center sm:text-right">Premium Banquet Hall & Event Venue — Gorakhpur, India</p>
         </div>
       </div>
     </footer>

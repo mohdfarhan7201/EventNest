@@ -68,7 +68,7 @@ export function Hero() {
           </div>
           <div data-hero-meta className="max-w-md flex flex-col gap-6">
             <p className="text-sm leading-relaxed text-ivory/80">
-              Gorakhpur's premier destination for weddings, family functions, and corporate events. Offering a grand open courtyard, elegant banquet facilities, and comfortable deluxe rooms for your special stay.
+              Gorakhpur's premier destination for weddings, family functions, and corporate events. Offering a grand open courtyard, elegant banquet facilities, and comfortable complimentary rooms for the host family to prepare.
             </p>
             <a 
               href={`tel:${estate.phone.replace(/\s/g, "")}`} 

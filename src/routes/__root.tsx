@@ -76,12 +76,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: `${estate.name} — Premium Banquet Hall in Gorakhpur` },
       {
         name: "description",
-        content: `${estate.name}: Premium Banquet Hall & Deluxe Rooms in Gorakhpur.`
+        content: `${estate.name}: Premium Banquet Hall & Event Venue in Gorakhpur.`
       },
       { name: "author", content: estate.name },
       { name: "theme-color", content: "#171512" },
       { name: "robots", content: "index, follow" },
-      { name: "keywords", content: "Banquet Hall in Gorakhpur, Best Banquet Hall in Gorakhpur, Banquet Hall Gorakhpur, Wedding Banquet Hall in Gorakhpur, Wedding Venue in Gorakhpur, Event Venue in Gorakhpur, Marriage Hall in Gorakhpur, Party Hall in Gorakhpur, Birthday Party Hall in Gorakhpur, Reception Hall in Gorakhpur, Best wedding venue in Gorakhpur, Banquet hall for wedding in Gorakhpur, Banquet hall for birthday party in Gorakhpur, Affordable banquet hall in Gorakhpur, AC banquet hall in Gorakhpur, Banquet hall with rooms in Gorakhpur, Banquet hall with parking in Gorakhpur, Reception venue in Gorakhpur, Family function hall in Gorakhpur, Event venue near Singhania Gorakhpur, Marriage hall near me, Wedding hall near me" },
+      { name: "keywords", content: "Banquet Hall in Gorakhpur, Best Banquet Hall in Gorakhpur, Banquet Hall Gorakhpur, Wedding Banquet Hall in Gorakhpur, Wedding Venue in Gorakhpur, Event Venue in Gorakhpur, Marriage Hall in Gorakhpur, Party Hall in Gorakhpur, Birthday Party Hall in Gorakhpur, Reception Hall in Gorakhpur, Best wedding venue in Gorakhpur, Banquet hall for wedding in Gorakhpur, Banquet hall for birthday party in Gorakhpur, Affordable banquet hall in Gorakhpur, AC banquet hall in Gorakhpur, Banquet hall with parking in Gorakhpur, Reception venue in Gorakhpur, Family function hall in Gorakhpur, Event venue near Singhania Gorakhpur, Marriage hall near me, Wedding hall near me" },
       { property: "og:site_name", content: estate.name },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
@@ -108,7 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": ["EventVenue", "LocalBusiness"],
           name: estate.name,
-          description: "Premium Banquet Hall & Deluxe Rooms in Gorakhpur for Weddings, Corporate Events, and Celebrations.",
+          description: "Premium Banquet Hall & Event Venue in Gorakhpur for Weddings, Corporate Events, and Celebrations.",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Kunraghat",
