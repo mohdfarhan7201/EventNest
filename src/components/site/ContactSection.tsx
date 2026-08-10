@@ -55,7 +55,7 @@ export function ContactSection({ chapter }: { chapter?: string }) {
         <div className="flex items-center gap-4">
           <span className="label text-brass">{chapter ? `Ch. ${chapter}` : "Contact"}</span>
           <span className="hairline-x w-10 sm:w-16" />
-          <span className="label">Write to the house</span>
+          <span className="label">Contact the venue</span>
         </div>
 
         <h2 id="contact-heading" data-heading className="display anim-hidden mt-8 max-w-3xl text-[2.6rem] leading-[1.02] sm:text-[4.4rem]">

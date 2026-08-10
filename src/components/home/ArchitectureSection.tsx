@@ -22,13 +22,13 @@ export function ArchitectureSection() {
   return (
     <Section labelledBy="house-heading">
       <div ref={ref}>
-        <ChapterMark number="04" title="The House" />
+        <ChapterMark number="04" title="The Venue" />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
           <h2 id="house-heading" data-heading className="display anim-hidden max-w-3xl text-[2.6rem] leading-[1.02] sm:text-[4.2rem]">
-            Read the house the way an architect would.
+            Explore the spaces designed for your grandest events.
           </h2>
-          <p data-fade className="label lg:pb-3">Plates 01 — 05</p>
+          <p data-fade className="label lg:pb-3">Spaces 01 — 05</p>
         </div>
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:gap-16">

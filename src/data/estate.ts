@@ -175,7 +175,7 @@ export type JournalEntry = { slug: string; title: string; excerpt: string; date:
 
 export const journal: JournalEntry[] = [
   { slug: "welcome", title: "Welcome To Event Nest", excerpt: "Premium Event Venue In Gorakhpur. Event Nest is a premium destination.", date: "2024", category: "Stay", image: images.detailCarving },
-  { slug: "banquet", title: "The Best Banquet Experience", excerpt: "A house with great spaces and a beautiful banquet hall.", date: "2024", category: "The Hall", image: images.dining },
+  { slug: "banquet", title: "The Best Banquet Experience", excerpt: "A premium venue with great spaces and a beautiful banquet hall.", date: "2024", category: "The Hall", image: images.dining },
   { slug: "celebration", title: "Celebrate With Us", excerpt: "Notes on the events we hosted and the memories made.", date: "2024", category: "Events", image: images.garden },
 ];
 

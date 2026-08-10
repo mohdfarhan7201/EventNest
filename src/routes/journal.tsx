@@ -7,7 +7,7 @@ import { useGsapContext, revealImage, revealBlock } from "@/lib/anim";
 
 const title = "Journal — Event Nest";
 const description =
-  "Notes from the house: on lime plaster, the argument for one table, and the hour the garden was designed around.";
+  "Updates and stories from Event Nest: notes on our events, decor, and the memories we help create.";
 
 export const Route = createFileRoute("/journal")({
   head: () => ({
@@ -33,7 +33,7 @@ function Journal() {
     <>
       <PageHero
         label="08 — Journal"
-        title="Notes kept by the house."
+        title="Notes from Event Nest."
         intro="Occasional writing on materials, meals and repair, by whoever is keeping the archive that season."
         image={images.garden}
         alt="The estate garden at dawn with its water channel filling"
@@ -50,7 +50,7 @@ function Journal() {
                 <p className="label text-brass">{entry.category} — {entry.date}</p>
                 <h3 className="display mt-4 text-[1.9rem] leading-tight sm:text-[2.8rem]">{entry.title}</h3>
                 <p className="mt-5 max-w-md text-sm leading-[1.9] text-muted-foreground sm:text-base">{entry.excerpt}</p>
-                <p className="label mt-7">Full entry available at the house</p>
+                <p className="label mt-7">Read more about our events</p>
               </div>
             </article>
           ))}

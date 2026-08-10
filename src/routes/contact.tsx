@@ -5,7 +5,7 @@ import { images } from "@/data/estate";
 
 const title = "Contact & Enquiries — Event Nest";
 const description =
-  "Write to the house: reservations, celebrations and full property enquiries at Event Nest, Gorakhpur, Uttar Pradesh.";
+  "Contact Event Nest: reservations, celebrations and full property enquiries in Gorakhpur, Uttar Pradesh.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -39,7 +39,7 @@ function Contact() {
     <>
       <PageHero
         label="09 — Contact"
-        title="Write to the house."
+        title="Reach out to Event Nest."
         intro="Enquiries are read by the family, not a call centre. Expect a reply within one working day."
         image={images.heroEstate}
         alt="The lamplit entrance doors of the estate at dusk"

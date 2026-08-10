@@ -27,7 +27,7 @@ function Celebrations() {
     <>
       <PageHero
         label="05 — Celebrations"
-        title="A house that has held a hundred years of gatherings."
+        title="A premium venue that turns gatherings into unforgettable celebrations."
         intro="Take the courtyard, the hall, the garden — or the whole property, and everyone in your life with it."
         image={images.celebration}
         alt="The courtyard set with lanterns and a long candlelit table for an evening celebration"

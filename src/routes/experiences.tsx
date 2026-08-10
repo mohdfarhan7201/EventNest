@@ -28,7 +28,7 @@ function Experiences() {
       <PageHero
         label="06 — Experiences"
         title="Offered, never scheduled."
-        intro="Four ways to spend a day here, each arranged with the household rather than booked from a list."
+        intro="Premium amenities and dedicated spaces, curated to make your event seamless and grand."
         image={images.terrace}
         alt="The rooftop terrace of the estate at golden hour behind carved screens"
       />

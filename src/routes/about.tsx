@@ -7,7 +7,7 @@ import { images } from "@/data/estate";
 
 const title = "The Story — Event Nest";
 const description =
-  "How a twelve-doored house in Bundelkhand was built, emptied, repaired and reopened by four generations of the same family.";
+  "The story behind Event Nest, Gorakhpur's premium banquet and celebration venue.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -41,8 +41,8 @@ function About() {
     <>
       <PageHero
         label="01 — The Story"
-        title="A house that was never finished, only continued."
-        intro="Four generations, three families of craftsmen, one courtyard. What follows is the record as the house keeps it."
+        title="A vision for perfect celebrations, built from the ground up."
+        intro="Premium facilities, elegant spaces, and a commitment to making your special days truly unforgettable."
         image={images.grandHall}
         alt="The long hall of the estate lit by dusty afternoon light"
       />

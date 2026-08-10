@@ -6,7 +6,7 @@ import { images } from "@/data/estate";
 
 const title = "The Archive — Event Nest Gallery";
 const description =
-  "Photographs of the house: architecture, the table, celebrations and the small details, filed by category and year.";
+  "Photographs of Event Nest: architecture, celebrations, dining and elegant details.";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -28,7 +28,7 @@ function Gallery() {
       <PageHero
         label="07 — Gallery"
         title="The archive, opened."
-        intro="Plates from the house record — some taken this season, some found in a drawer."
+        intro="Moments and spaces from Event Nest — capturing the elegance of our premium venue."
         image={images.courtyard}
         alt="The colonnaded inner courtyard in morning haze"
       />

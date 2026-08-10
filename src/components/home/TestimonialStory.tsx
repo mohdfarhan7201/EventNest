@@ -54,7 +54,7 @@ export function TestimonialStory() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-5 py-28 sm:px-8 sm:py-40">
-        <div data-fade><ChapterMark number="11" title="Voices From the House" /></div>
+        <div data-fade><ChapterMark number="11" title="Voices of Our Guests" /></div>
         <h2 id="voices-heading" className="sr-only">What guests have said</h2>
 
         <div ref={quoteRef} className="mt-14 max-w-4xl min-h-[220px] sm:min-h-[260px]">

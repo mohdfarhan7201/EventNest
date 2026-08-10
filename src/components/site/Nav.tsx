@@ -167,7 +167,7 @@ export function Nav() {
         </div>
 
         <nav className="relative flex h-full flex-col justify-start sm:justify-center overflow-y-auto px-5 pb-8 pt-24 sm:px-8" aria-label="Estate index">
-          <p data-nav-meta className="label mb-8 hidden sm:block">Index of the house — {estate.established}</p>
+          <p data-nav-meta className="label mb-8 hidden sm:block">Event Nest — {estate.established}</p>
           <ul className="flex flex-col">
             {navItems.map((item, i) => (
               <li key={item.label + i} className="overflow-hidden border-b border-ivory/10 last:border-0">

@@ -27,7 +27,7 @@ function NotFoundComponent() {
         <p className="label text-brass">Not in the archive</p>
         <h1 className="display mt-4 text-6xl">404</h1>
         <p className="mt-4 text-sm text-muted-foreground">
-          That page is not among the house records. It may have been moved, or never written.
+          That page is not in our records. It may have been moved, or never existed.
         </p>
         <Link to="/" className="label mt-8 inline-flex border-b border-current pb-1 hover:text-brass">
           Return to the entrance

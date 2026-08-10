@@ -36,9 +36,13 @@ export function FinalInvitation() {
       <div className="relative mx-auto max-w-7xl px-5 py-32 sm:px-8 sm:py-48">
         <p data-fade className="label text-brass">Your story starts here</p>
         <h2 id="invitation-heading" className="display mt-8 text-[4.5rem] leading-[0.86] sm:text-[9rem] lg:text-[12rem]">
-          <span data-huge className="anim-hidden block overflow-hidden">Come</span>
-          <span data-huge className="anim-hidden block overflow-hidden italic text-cream">inside.</span>
+          <span data-huge className="anim-hidden block overflow-hidden">The doors</span>
+          <span data-huge className="anim-hidden block overflow-hidden italic text-cream">are open.</span>
         </h2>
+
+        <p data-fade className="mt-8 max-w-sm text-sm leading-[1.8] text-muted-foreground sm:text-base">
+          A premium venue that awaits your grand celebration.
+        </p>
 
         <div className="mt-16 flex flex-wrap items-center gap-x-10 gap-y-5">
           <Link
