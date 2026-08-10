@@ -40,7 +40,7 @@ function Contact() {
   return (
     <>
       <PageHero
-        label="09 — Contact"
+        label="06 — Contact"
         title="Reach out to Event Nest."
         intro="We believe that every grand event begins with a great conversation. Enquiries are handled directly by our dedicated management team to ensure you get personalized attention. Reach out to discuss your upcoming celebrations, and expect a prompt, detailed reply within one working day."
         image={images.heroEstate}

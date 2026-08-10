@@ -41,7 +41,7 @@ function Experiences() {
   return (
     <>
       <PageHero
-        label="06 — Experiences"
+        label="03 — Experiences"
         title="Offered, never scheduled."
         intro="Beyond just providing a venue, Event Nest offers a complete premium experience. From dedicated, air-conditioned rooms for the host family to prepare in peace, to highly trained staff ready to assist at every moment, we ensure your time here is as relaxing as it is grand."
         image={images.terrace}

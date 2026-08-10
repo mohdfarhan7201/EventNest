@@ -41,7 +41,7 @@ function Celebrations() {
   return (
     <>
       <PageHero
-        label="05 — Celebrations"
+        label="02 — Celebrations"
         title="A premium venue that turns gatherings into unforgettable celebrations."
         intro="Whether you are planning a grand wedding, an intimate family gathering, or a corporate retreat, Event Nest provides the perfect canvas. Take over our expansive open courtyard, our beautifully lit banquet hall, or the entire property to create an unforgettable experience for you and your guests."
         image={images.celebration}

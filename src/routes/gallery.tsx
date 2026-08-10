@@ -41,7 +41,7 @@ function Gallery() {
   return (
     <>
       <PageHero
-        label="07 — Gallery"
+        label="04 — Gallery"
         title="The archive, opened."
         intro="Take a visual journey through Event Nest. Explore our beautifully designed architecture, glimpse into the lavish dining setups, and see how our versatile spaces come alive during grand celebrations. Each photograph captures the elegance and scale of the experiences we help create."
         image={images.courtyard}
