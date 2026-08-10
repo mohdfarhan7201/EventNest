@@ -13,31 +13,20 @@ export function DetailsGallery() {
       return;
     }
     
-    // Premium stagger reveal animation for the whole grid
-    gsap.fromTo(
-      figures,
-      {
-        clipPath: "inset(100% 0% 0% 0%)",
-        y: 60,
-        opacity: 0,
+    gsap.from(figures, {
+      y: 60,
+      opacity: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: root,
+        start: "top 80%",
       },
-      {
-        clipPath: "inset(0% 0% 0% 0%)",
-        y: 0,
-        opacity: 1,
-        duration: 1.6,
-        ease: "power3.out",
-        stagger: 0.15,
-        scrollTrigger: {
-          trigger: root,
-          start: "top 75%",
-        },
-      }
-    );
+    });
 
-    figures.forEach((fig, i) => {
-      // Gentle parallax on each image to keep it dynamic
-      parallax(fig.querySelector("img"), reduced, 12);
+    figures.forEach((fig) => {
+      parallax(fig.querySelector("img"), reduced, 8);
     });
   });
 
