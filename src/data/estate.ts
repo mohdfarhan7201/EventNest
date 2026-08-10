@@ -74,21 +74,9 @@ export const timeline: TimelineEntry[] = [
   },
   {
     year: "2024",
-    title: "The Doors Open",
-    body: "We welcomed our first guests. Dedicated air-conditioned spaces are provided for the host family to get ready and relax during the events.",
-    image: images.grandHall,
-  },
-  {
-    year: "2024",
     title: "The Banquet Experience",
     body: "A beautiful space created for weddings, birthday parties, receptions, and family celebrations.",
-    image: images.garden,
-  },
-  {
-    year: "2024",
-    title: "The Premium Upgrade",
-    body: "Adding modern facilities and AC to all our private changing spaces to ensure the highest comfort for the host family.",
-    image: images.detailCarving,
+    image: images.grandHall,
   },
   {
     year: "Today",
