@@ -25,6 +25,15 @@ export function TestimonialStory() {
     return () => { tween.kill(); };
   }, [active]);
 
+  // Auto-play the testimonials every 6 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActive((prev) => (prev + 1) % testimonials.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
+
   const t = testimonials[active] ?? testimonials[0]!;
 
   return (
