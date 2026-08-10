@@ -76,7 +76,7 @@ export const timeline: TimelineEntry[] = [
   {
     year: "2024",
     title: "The Doors Open",
-    body: "We welcomed our first guests. Dedicated air-conditioned rooms are provided for the host family to get ready and relax during the events.",
+    body: "We welcomed our first guests. Dedicated air-conditioned spaces are provided for the host family to get ready and relax during the events.",
     image: images.grandHall,
   },
   {
@@ -88,13 +88,13 @@ export const timeline: TimelineEntry[] = [
   {
     year: "2024",
     title: "The Premium Upgrade",
-    body: "Adding modern facilities and AC to all our complimentary changing rooms to ensure the highest comfort for the host family.",
+    body: "Adding modern facilities and AC to all our private changing spaces to ensure the highest comfort for the host family.",
     image: images.detailCarving,
   },
   {
     year: "Today",
     title: "The Event Nest Receives",
-    body: "Spacious getting-ready rooms. Clean environments. The same welcoming atmosphere. Nothing has been added that the space did not already ask for.",
+    body: "Spacious getting-ready spaces. Clean environments. The same welcoming atmosphere. Nothing has been added that the space did not already ask for.",
     image: images.terrace,
   },
 ];
@@ -109,37 +109,13 @@ export type ArchitectureDetail = {
 
 export const architecture: ArchitectureDetail[] = [
   { id: "banquet", name: "The Banquet Hall", note: "Elegant banquet facilities for weddings and receptions, beautifully decorated.", meta: "Plate 01 — Banquet Hall", image: images.courtyard },
-  { id: "rooms", name: "Complimentary Rooms", note: "Spacious & comfortable changing rooms for the host family.", meta: "Plate 02 — Accommodation", image: images.detailCarving },
+  { id: "spaces", name: "Host Spaces", note: "Spacious & comfortable changing areas for the host family.", meta: "Plate 02 — Spaces", image: images.detailCarving },
   { id: "hall", name: "The Grand Hall", note: "A single unbroken run, lit end to end for your special occasions.", meta: "Plate 03 — Grand Hall", image: images.grandHall },
   { id: "parking", name: "The Parking Area", note: "Ample parking space for all your guests and visitors.", meta: "Plate 04 — Facilities", image: images.garden },
   { id: "support", name: "Guest Support", note: "Very supportive staff to make your stay relaxing and memorable.", meta: "Plate 05 — Support", image: images.terrace },
 ];
 
-export type Room = {
-  id: string;
-  index: string;
-  name: string;
-  description: string;
-  image: string;
-  size: string;
-  guests: string;
-  bed: string;
-  feature: string;
-};
 
-export const rooms: Room[] = [
-  {
-    id: "complimentary-room",
-    index: "01",
-    name: "Complimentary Host Rooms",
-    description: "Air-conditioned, comfortable rooms available exclusively for the host family to get ready, rest, and prepare for the big event.",
-    image: images.room1,
-    size: "Spacious",
-    guests: "Host Family",
-    bed: "Seating Available",
-    feature: "AC & Attached Washroom",
-  }
-];
 
 export type DiningVenue = {
   id: string;
@@ -172,13 +148,13 @@ export type Experience = { id: string; kind: string; title: string; body: string
 export const experiences: Experience[] = [
   { id: "weddings", kind: "Events", title: "Wedding Venue", body: "Premium arrangements for your special day.", image: images.detailCarving },
   { id: "family", kind: "Gathering", title: "Family Events", body: "Celebrate special moments with family in our spacious halls.", image: images.dining },
-  { id: "stay", kind: "Stay", title: "Comfortable Facilities", body: "Relax in our complimentary rooms with AC and dedicated support.", image: images.garden },
+  { id: "stay", kind: "Stay", title: "Comfortable Facilities", body: "Relax in our dedicated spaces with AC and support.", image: images.garden },
   { id: "leisure", kind: "Leisure", title: "Relaxing Atmosphere", body: "Enjoy a wonderful atmosphere for your events and stays.", image: images.heroEstate },
 ];
 
 export type GalleryItem = {
   id: string;
-  category: "Architecture" | "Rooms" | "Dining" | "Celebrations" | "People" | "Details";
+  category: "Architecture" | "Dining" | "Celebrations" | "People" | "Details";
   caption: string;
   year: string;
   image: string;
@@ -190,7 +166,7 @@ export const gallery: GalleryItem[] = [
   { id: "g1", category: "Architecture", caption: "The Event Nest facade", year: "2024", image: facadeNight, span: "wide", featured: true },
   { id: "g2", category: "Architecture", caption: "The grand entrance", year: "2024", image: entranceNight, span: "tall", featured: true },
   { id: "g3", category: "Architecture", caption: "Courtyard view", year: "2024", image: entranceGate, featured: true },
-  { id: "g4", category: "Rooms", caption: "The Bridal Room", year: "2024", image: hotelRoom, featured: true },
+  { id: "g4", category: "Details", caption: "Bridal Space", year: "2024", image: hotelRoom, featured: true },
   { id: "g5", category: "Architecture", caption: "The grand hall", year: "2024", image: grandHallSeating, featured: true },
   { id: "g6", category: "Celebrations", caption: "Wedding stage setup", year: "Today", image: weddingStage, span: "wide" },
   { id: "g7", category: "Details", caption: "Elegant seating", year: "2024", image: seatingTable },
@@ -198,13 +174,13 @@ export const gallery: GalleryItem[] = [
   { id: "g9", category: "Dining", caption: "The buffet setup", year: "Today", image: buffetSetup, featured: true },
 ];
 
-export const galleryFilters = ["All", "Architecture", "Rooms", "Dining", "Celebrations", "People", "Details"] as const;
+export const galleryFilters = ["All", "Architecture", "Dining", "Celebrations", "People", "Details"] as const;
 
 export type Testimonial = { quote: string; name: string; occasion: string; year: string; image: string };
 
 export const testimonials: Testimonial[] = [
   { quote: "Beautiful banquet hall with excellent arrangements and a wonderful atmosphere. Perfect place for weddings and family celebrations.", name: "Rahul Sharma", occasion: "Wedding", year: "2024", image: images.celebration },
-  { quote: "Comfortable getting-ready rooms, clean environment, and very supportive staff. Highly recommended for special events.", name: "Priya Verma", occasion: "Stay & Event", year: "2024", image: images.courtyard },
+  { quote: "Comfortable getting-ready spaces, clean environment, and very supportive staff. Highly recommended for special events.", name: "Priya Verma", occasion: "Stay & Event", year: "2024", image: images.courtyard },
   { quote: "The best venue in Gorakhpur for any large gathering. We arrived as guests and left completely satisfied.", name: "The Mehta family", occasion: "Family Celebration", year: "2024", image: images.grandHall },
 ];
 
@@ -212,7 +188,7 @@ export type JournalEntry = { slug: string; title: string; excerpt: string; date:
 
 export const journal: JournalEntry[] = [
   { slug: "welcome", title: "Welcome To Event Nest", excerpt: "Premium Event Venue In Gorakhpur. Event Nest is a premium destination.", date: "2024", category: "Stay", image: images.detailCarving },
-  { slug: "banquet", title: "The Best Banquet Experience", excerpt: "A house with great rooms and a beautiful banquet hall.", date: "2024", category: "The Hall", image: images.dining },
+  { slug: "banquet", title: "The Best Banquet Experience", excerpt: "A house with great spaces and a beautiful banquet hall.", date: "2024", category: "The Hall", image: images.dining },
   { slug: "celebration", title: "Celebrate With Us", excerpt: "Notes on the events we hosted and the memories made.", date: "2024", category: "Events", image: images.garden },
 ];
 

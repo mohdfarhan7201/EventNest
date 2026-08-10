@@ -59,7 +59,7 @@ export function ContactSection({ chapter }: { chapter?: string }) {
         </div>
 
         <h2 id="contact-heading" data-heading className="display anim-hidden mt-8 max-w-3xl text-[2.6rem] leading-[1.02] sm:text-[4.4rem]">
-          Tell us when, and we will keep the room.
+          Tell us when, and we will prepare the venue.
         </h2>
 
         <div className="mt-16 grid gap-16 lg:grid-cols-[1fr_1.2fr] lg:gap-24">

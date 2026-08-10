@@ -6,7 +6,7 @@ import { images } from "@/data/estate";
 
 const title = "The Archive — Event Nest Gallery";
 const description =
-  "Photographs of the house: architecture, rooms, the table, celebrations and the small details, filed by category and year.";
+  "Photographs of the house: architecture, the table, celebrations and the small details, filed by category and year.";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({

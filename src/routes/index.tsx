@@ -3,7 +3,6 @@ import { Hero } from "@/components/home/Hero";
 import { StorySection } from "@/components/home/StorySection";
 import { HistoryTimeline } from "@/components/home/HistoryTimeline";
 import { ArchitectureSection } from "@/components/home/ArchitectureSection";
-import { ComplimentaryRooms } from "@/components/home/ComplimentaryRooms";
 import { DetailsGallery } from "@/components/home/DetailsGallery";
 import { DiningSection } from "@/components/home/DiningSection";
 import { CelebrationSection } from "@/components/home/CelebrationSection";
@@ -39,7 +38,6 @@ function Index() {
       <CelebrationSection />
       <HistoryTimeline />
       <ArchitectureSection />
-      <ComplimentaryRooms />
       <DetailsGallery />
       <DiningSection />
       <StorySection />

@@ -33,7 +33,7 @@ export function CelebrationSection() {
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 py-28 sm:px-8">
         <ChapterMark number="02" title="Celebrations" />
         <h2 id="celebrations-heading" data-heading className="display anim-hidden mt-8 max-w-4xl text-[2.5rem] leading-[1.0] sm:text-[4.6rem] lg:text-[5.6rem]">
-          For the moments that deserve more than a room.
+          For the moments that deserve more than a simple hall.
         </h2>
 
         <ul className="mt-14 max-w-3xl">

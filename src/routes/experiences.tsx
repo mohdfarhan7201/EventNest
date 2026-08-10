@@ -6,7 +6,7 @@ import { images } from "@/data/estate";
 
 const title = "Experiences — Event Nest";
 const description =
-  "The archive room, the copper kitchen, dawn in the garden and a walk through the town — offered, never scheduled.";
+  "The archive, the copper kitchen, dawn in the garden and a walk through the town — offered, never scheduled.";
 
 export const Route = createFileRoute("/experiences")({
   head: () => ({
