@@ -44,7 +44,7 @@ export function DetailsGallery() {
             <figure
               key={d.caption}
               data-detail
-              className={`group opacity-0 relative overflow-hidden ${
+              className={`group relative overflow-hidden ${
                 i % 2 !== 0 ? "lg:mt-16" : ""
               }`}
             >
