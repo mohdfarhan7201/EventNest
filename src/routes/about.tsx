@@ -16,7 +16,9 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:image", content: "https://www.eventnestbanquet.in/logo.png" },
       { property: "og:url", content: "https://www.eventnestbanquet.in/about" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://www.eventnestbanquet.in/about" }],
     scripts: [

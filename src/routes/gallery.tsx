@@ -4,9 +4,9 @@ import { ArchiveGallery } from "@/components/home/ArchiveGallery";
 import { FinalInvitation } from "@/components/home/FinalInvitation";
 import { images } from "@/data/estate";
 
-const title = "The Archive — Event Nest Gallery";
+const title = "Gallery — Event Nest";
 const description =
-  "Photographs of Event Nest: architecture, celebrations, dining and elegant details.";
+  "Explore the visual archive of Event Nest. See our grand banquet hall, elegant decor, and beautiful celebration moments.";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -15,9 +15,24 @@ export const Route = createFileRoute("/gallery")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/gallery" },
+      { property: "og:image", content: "https://www.eventnestbanquet.in/logo.png" },
+      { property: "og:url", content: "https://www.eventnestbanquet.in/gallery" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/gallery" }],
+    links: [{ rel: "canonical", href: "https://www.eventnestbanquet.in/gallery" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eventnestbanquet.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://www.eventnestbanquet.in/gallery" }
+          ]
+        })
+      }
+    ],
   }),
   component: Gallery,
 });

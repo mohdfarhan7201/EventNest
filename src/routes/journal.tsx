@@ -7,7 +7,7 @@ import { useGsapContext, revealImage, revealBlock } from "@/lib/anim";
 
 const title = "Journal — Event Nest";
 const description =
-  "Updates and stories from Event Nest: notes on our events, decor, and the memories we help create.";
+  "Latest updates, event stories, and insights from Gorakhpur's most sought-after banquet hall.";
 
 export const Route = createFileRoute("/journal")({
   head: () => ({
@@ -16,9 +16,24 @@ export const Route = createFileRoute("/journal")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/journal" },
+      { property: "og:image", content: "https://www.eventnestbanquet.in/logo.png" },
+      { property: "og:url", content: "https://www.eventnestbanquet.in/journal" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/journal" }],
+    links: [{ rel: "canonical", href: "https://www.eventnestbanquet.in/journal" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eventnestbanquet.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Journal", "item": "https://www.eventnestbanquet.in/journal" }
+          ]
+        })
+      }
+    ],
   }),
   component: Journal,
 });

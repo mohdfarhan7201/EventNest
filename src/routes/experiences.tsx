@@ -6,7 +6,7 @@ import { images } from "@/data/estate";
 
 const title = "Experiences — Event Nest";
 const description =
-  "The archive, the copper kitchen, dawn in the garden and a walk through the town — offered, never scheduled.";
+  "Discover premium amenities, dedicated host spaces, and impeccable guest support designed for seamless events at Event Nest.";
 
 export const Route = createFileRoute("/experiences")({
   head: () => ({
@@ -15,9 +15,24 @@ export const Route = createFileRoute("/experiences")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/experiences" },
+      { property: "og:image", content: "https://www.eventnestbanquet.in/logo.png" },
+      { property: "og:url", content: "https://www.eventnestbanquet.in/experiences" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/experiences" }],
+    links: [{ rel: "canonical", href: "https://www.eventnestbanquet.in/experiences" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eventnestbanquet.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Experiences", "item": "https://www.eventnestbanquet.in/experiences" }
+          ]
+        })
+      }
+    ],
   }),
   component: Experiences,
 });

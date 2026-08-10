@@ -3,9 +3,9 @@ import { PageHero } from "@/components/site/PageHero";
 import { ContactSection } from "@/components/site/ContactSection";
 import { images } from "@/data/estate";
 
-const title = "Contact & Enquiries — Event Nest";
+const title = "Contact Us — Event Nest";
 const description =
-  "Contact Event Nest: reservations, celebrations and full property enquiries in Gorakhpur, Uttar Pradesh.";
+  "Plan your visit to Event Nest. Reach out to our dedicated management team to discuss your upcoming celebrations in Gorakhpur.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -14,7 +14,9 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:image", content: "https://www.eventnestbanquet.in/logo.png" },
       { property: "og:url", content: "https://www.eventnestbanquet.in/contact" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://www.eventnestbanquet.in/contact" }],
     scripts: [

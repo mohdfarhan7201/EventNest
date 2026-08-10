@@ -6,7 +6,7 @@ import { images } from "@/data/estate";
 
 const title = "Celebrations — Event Nest";
 const description =
-  "Weddings, private events, corporate retreats and family gatherings at a heritage estate in Bundelkhand. The courtyard seats one hundred and forty.";
+  "Host grand weddings, milestone birthdays, and corporate retreats at Event Nest, Gorakhpur's premium celebration venue.";
 
 export const Route = createFileRoute("/celebrations")({
   head: () => ({
@@ -15,9 +15,24 @@ export const Route = createFileRoute("/celebrations")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/celebrations" },
+      { property: "og:image", content: "https://www.eventnestbanquet.in/logo.png" },
+      { property: "og:url", content: "https://www.eventnestbanquet.in/celebrations" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/celebrations" }],
+    links: [{ rel: "canonical", href: "https://www.eventnestbanquet.in/celebrations" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eventnestbanquet.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Celebrations", "item": "https://www.eventnestbanquet.in/celebrations" }
+          ]
+        })
+      }
+    ],
   }),
   component: Celebrations,
 });
