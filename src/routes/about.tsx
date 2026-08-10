@@ -7,7 +7,7 @@ import { images } from "@/data/estate";
 
 const title = "The Story — Event Nest";
 const description =
-  "The story behind Event Nest, Gorakhpur's premium banquet and celebration venue.";
+  "Discover the story behind Event Nest, Gorakhpur's premier banquet hall. Learn how we built a venue that blends premium facilities, elegant spaces, and an uncompromising commitment to your special days.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({

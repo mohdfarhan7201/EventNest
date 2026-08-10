@@ -7,7 +7,7 @@ import { useGsapContext, revealImage, revealBlock } from "@/lib/anim";
 
 const title = "Journal — Event Nest";
 const description =
-  "Latest updates, event stories, and insights from Gorakhpur's most sought-after banquet hall.";
+  "Stay updated with the latest happenings at Event Nest. Read about our beautifully hosted weddings, discover versatile decor setups, and find insights into making your event unforgettable.";
 
 export const Route = createFileRoute("/journal")({
   head: () => ({

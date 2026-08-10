@@ -6,7 +6,7 @@ import { images } from "@/data/estate";
 
 const title = "Celebrations — Event Nest";
 const description =
-  "Host grand weddings, milestone birthdays, and corporate retreats at Event Nest, Gorakhpur's premium celebration venue.";
+  "Host your grand weddings, milestone birthdays, family gatherings, and corporate retreats at Event Nest. Experience Gorakhpur's finest premium celebration venue with unmatched hospitality.";
 
 export const Route = createFileRoute("/celebrations")({
   head: () => ({

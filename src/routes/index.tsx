@@ -13,7 +13,7 @@ import { NearbyLocations } from "@/components/home/NearbyLocations";
 
 const title = "Event Nest — Premium Banquet Hall & Event Venue in Gorakhpur";
 const description =
-  "A heritage estate in Bundelkhand, India — repaired, never reinvented. Featuring an elegant open courtyard for gatherings.";
+  "Welcome to Event Nest, Gorakhpur's most premium banquet hall and event venue. We offer elegant courtyards, lavish banquets, and top-tier hospitality for your grand celebrations.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -22,9 +22,23 @@ export const Route = createFileRoute("/")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/" },
+      { property: "og:image", content: "https://www.eventnestbanquet.in/logo.png" },
+      { property: "og:url", content: "https://www.eventnestbanquet.in" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://www.eventnestbanquet.in" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eventnestbanquet.in/" }
+          ]
+        })
+      }
+    ],
   }),
   component: Index,
 });

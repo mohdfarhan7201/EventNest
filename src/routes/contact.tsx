@@ -5,7 +5,7 @@ import { images } from "@/data/estate";
 
 const title = "Contact Us — Event Nest";
 const description =
-  "Plan your visit to Event Nest. Reach out to our dedicated management team to discuss your upcoming celebrations in Gorakhpur.";
+  "Ready to plan your next big event? Reach out to the dedicated management team at Event Nest Gorakhpur. Contact us today to book our premium banquet hall and start your celebration journey.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

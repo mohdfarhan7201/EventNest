@@ -86,11 +86,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_IN" },
       { property: "og:image", content: "https://www.eventnestbanquet.in/logo.png" },
-      { property: "og:url", content: "https://www.eventnestbanquet.in/" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "publisher", content: "Event Nest" },
     ],
     links: [
-      { rel: "canonical", href: "https://www.eventnestbanquet.in/" },
       { rel: "manifest", href: "/manifest.json" },
       { rel: "icon", type: "image/png", href: logo },
       { rel: "stylesheet", href: appCss },
@@ -120,7 +119,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           telephone: estate.phone,
           email: estate.email,
           url: "https://www.eventnestbanquet.in/",
-          image: "https://www.eventnestbanquet.in/logo.png"
+          image: "https://www.eventnestbanquet.in/logo.png",
+          publisher: {
+            "@type": "Organization",
+            "name": "Event Nest",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.eventnestbanquet.in/logo.png"
+            }
+          }
         }),
       },
     ],

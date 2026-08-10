@@ -6,7 +6,7 @@ import { images } from "@/data/estate";
 
 const title = "Gallery — Event Nest";
 const description =
-  "Explore the visual archive of Event Nest. See our grand banquet hall, elegant decor, and beautiful celebration moments.";
+  "Explore the visual archive of Event Nest. See the stunning architecture of our grand banquet hall, elegant decor setups, and beautiful moments from the spectacular celebrations we host.";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({

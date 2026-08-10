@@ -6,7 +6,7 @@ import { images } from "@/data/estate";
 
 const title = "Experiences — Event Nest";
 const description =
-  "Discover premium amenities, dedicated host spaces, and impeccable guest support designed for seamless events at Event Nest.";
+  "Discover the premium amenities at Event Nest. From our dedicated host spaces and lavish catering to impeccable guest support, we curate experiences designed for your utmost comfort and joy.";
 
 export const Route = createFileRoute("/experiences")({
   head: () => ({
