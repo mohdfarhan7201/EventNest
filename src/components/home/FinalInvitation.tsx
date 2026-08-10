@@ -33,7 +33,7 @@ export function FinalInvitation() {
         <div className="absolute inset-0 bg-charcoal/82" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-5 py-32 sm:px-8 sm:py-48">
+      <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-32">
         <p data-fade className="label text-brass">Your story starts here</p>
         <h2 id="invitation-heading" className="display mt-8 text-[3.5rem] leading-[0.9] sm:text-[6rem] lg:text-[8rem]">
           <span data-huge className="anim-hidden block overflow-hidden">The doors</span>
