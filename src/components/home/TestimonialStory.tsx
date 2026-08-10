@@ -17,8 +17,11 @@ export function TestimonialStory() {
 
   useEffect(() => {
     if (!quoteRef.current || prefersReducedMotion()) return;
+    const activeChild = quoteRef.current.children[active];
+    if (!activeChild) return;
+
     const tween = gsap.fromTo(
-      quoteRef.current.children,
+      activeChild.children,
       { opacity: 0, x: -22 },
       { opacity: 1, x: 0, duration: 0.8, stagger: 0.08, ease: "power2.out" },
     );
@@ -34,7 +37,6 @@ export function TestimonialStory() {
   }, []);
 
 
-  const t = testimonials[active] ?? testimonials[0]!;
 
   return (
     <section ref={ref} aria-labelledby="voices-heading" className="relative overflow-hidden">
@@ -57,12 +59,26 @@ export function TestimonialStory() {
         <div data-fade><ChapterMark number="11" title="Voices of Our Guests" /></div>
         <h2 id="voices-heading" className="sr-only">What guests have said</h2>
 
-        <div ref={quoteRef} className="mt-14 max-w-4xl min-h-[350px] sm:min-h-[280px] md:min-h-[250px]">
-          <blockquote className="display text-[1.9rem] leading-[1.18] text-ivory sm:text-[3.4rem]">
-            “{t.quote}”
-          </blockquote>
-          <p className="label mt-10 !text-brass">{t.name}</p>
-          <p className="label mt-2">{t.occasion} — {t.year}</p>
+        <div ref={quoteRef} className="mt-14 max-w-4xl grid">
+          {testimonials.map((t, index) => (
+            <div 
+              key={index} 
+              className="col-start-1 row-start-1"
+              style={{ 
+                opacity: active === index ? 1 : 0, 
+                visibility: active === index ? 'visible' : 'hidden',
+                pointerEvents: active === index ? 'auto' : 'none',
+                zIndex: active === index ? 10 : 0
+              }}
+              aria-hidden={active !== index}
+            >
+              <blockquote className="display text-[1.9rem] leading-[1.18] text-ivory sm:text-[3.4rem]">
+                “{t.quote}”
+              </blockquote>
+              <p className="label mt-10 !text-brass">{t.name}</p>
+              <p className="label mt-2">{t.occasion} — {t.year}</p>
+            </div>
+          ))}
         </div>
 
         <div className="mt-14 flex gap-3" role="group" aria-label="Choose a guest account">
