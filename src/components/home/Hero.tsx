@@ -68,7 +68,7 @@ export function Hero() {
           </div>
           <div data-hero-meta className="max-w-md flex flex-col gap-6">
             <p className="text-sm leading-relaxed text-ivory/80">
-              Gorakhpur's premier destination for weddings, family functions, and corporate events. Offering a grand open courtyard, elegant banquet facilities, and comfortable private spaces for the host family to prepare.
+              Set against the vibrant backdrop of Gorakhpur, Event Nest is a beautifully crafted premium venue designed to host your most cherished celebrations. From the moment you step through our grand entrance, you are greeted by sprawling open courtyards, an impeccably lit banquet hall, and a dedicated team committed to flawless execution. Whether it is an intimate family gathering, a grand wedding, or a professional corporate retreat, we provide the perfect blend of luxury, comfort, and seamless hospitality.
             </p>
             <a 
               href={`tel:${estate.phone.replace(/\s/g, "")}`} 

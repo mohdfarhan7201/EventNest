@@ -42,7 +42,7 @@ function About() {
       <PageHero
         label="01 — The Story"
         title="A vision for perfect celebrations, built from the ground up."
-        intro="Premium facilities, elegant spaces, and a commitment to making your special days truly unforgettable."
+        intro="Event Nest was founded with a single purpose: to provide Gorakhpur with a celebration venue that blends premium facilities, elegant open spaces, and an uncompromising commitment to making your special days truly unforgettable. Every corner of our property is designed to host your most cherished moments."
         image={images.grandHall}
         alt="The long hall of the estate lit by dusty afternoon light"
       />

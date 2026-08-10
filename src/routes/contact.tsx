@@ -40,7 +40,7 @@ function Contact() {
       <PageHero
         label="09 — Contact"
         title="Reach out to Event Nest."
-        intro="Enquiries are read by the family, not a call centre. Expect a reply within one working day."
+        intro="We believe that every grand event begins with a great conversation. Enquiries are handled directly by our dedicated management team to ensure you get personalized attention. Reach out to discuss your upcoming celebrations, and expect a prompt, detailed reply within one working day."
         image={images.heroEstate}
         alt="The lamplit entrance doors of the estate at dusk"
       />

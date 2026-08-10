@@ -34,7 +34,7 @@ function Journal() {
       <PageHero
         label="08 — Journal"
         title="Notes from Event Nest."
-        intro="Occasional writing on materials, meals and repair, by whoever is keeping the archive that season."
+        intro="Stay updated with the latest happenings at Event Nest. Here we document the beautiful weddings we host, showcase our versatile decor setups, and share insights into what makes our premium banquet facility the top choice in Gorakhpur."
         image={images.garden}
         alt="The estate garden at dawn with its water channel filling"
       />
