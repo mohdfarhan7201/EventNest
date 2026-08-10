@@ -47,8 +47,8 @@ function Contact() {
         image={images.heroEstate}
         alt="The lamplit entrance doors of the estate at dusk"
       />
-      <ContactSection />
       <NearbyLocations />
+      <ContactSection />
     </>
   );
 }
