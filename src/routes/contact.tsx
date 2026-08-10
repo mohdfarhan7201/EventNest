@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
 import { ContactSection } from "@/components/site/ContactSection";
+import { NearbyLocations } from "@/components/home/NearbyLocations";
 import { images } from "@/data/estate";
 
 const title = "Contact Event Nest — Book Premium Banquet Hall in Gorakhpur";
@@ -47,6 +48,7 @@ function Contact() {
         alt="The lamplit entrance doors of the estate at dusk"
       />
       <ContactSection />
+      <NearbyLocations />
     </>
   );
 }
