@@ -17,7 +17,7 @@ export function ExperienceSection() {
       <div ref={ref}>
         <ChapterMark number="09" title="Experiences" />
         <h2 id="experiences-heading" data-heading className="display anim-hidden mt-8 max-w-3xl text-[2.6rem] leading-[1.02] sm:text-[4.4rem]">
-          Days here are offered, never scheduled.
+          Experiences curated for your comfort and joy.
         </h2>
 
         <div className="mt-16 flex flex-col gap-20 sm:gap-28">

@@ -87,8 +87,8 @@ export function HistoryTimeline() {
       </div>
 
       <div className="pointer-events-none absolute inset-x-0 top-0 z-10 mx-auto max-w-7xl px-5 pt-24 sm:px-8 sm:pt-28">
-        <ChapterMark number="03" title="The Years That Shaped Us" />
-        <h2 id="timeline-heading" className="sr-only">The years that shaped Event Nest</h2>
+        <ChapterMark number="03" title="The Journey of Event Nest" />
+        <h2 id="timeline-heading" className="sr-only">The milestones that define our legacy</h2>
       </div>
 
       <div className="absolute inset-x-0 bottom-0 z-10 h-px bg-ivory/15">
