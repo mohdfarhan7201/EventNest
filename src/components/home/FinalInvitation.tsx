@@ -35,7 +35,7 @@ export function FinalInvitation() {
 
       <div className="relative mx-auto max-w-7xl px-5 py-32 sm:px-8 sm:py-48">
         <p data-fade className="label text-brass">Your story starts here</p>
-        <h2 id="invitation-heading" className="display mt-8 text-[4.5rem] leading-[0.86] sm:text-[9rem] lg:text-[12rem]">
+        <h2 id="invitation-heading" className="display mt-8 text-[3.5rem] leading-[0.9] sm:text-[6rem] lg:text-[8rem]">
           <span data-huge className="anim-hidden block overflow-hidden">The doors</span>
           <span data-huge className="anim-hidden block overflow-hidden italic text-cream">are open.</span>
         </h2>
