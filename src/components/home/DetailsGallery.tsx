@@ -29,10 +29,16 @@ export function DetailsGallery() {
           It is in the details.
         </h2>
 
-        <div className="mt-10 grid gap-6 sm:gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-x-8 gap-y-12 sm:grid-cols-12">
           {details.map((d, i) => {
+            const layouts = [
+              "sm:col-span-5 sm:col-start-1",
+              "sm:col-span-5 sm:col-start-7 sm:mt-12",
+              "sm:col-span-4 sm:col-start-2 sm:mt-4",
+              "sm:col-span-5 sm:col-start-7 sm:mt-8",
+            ];
             return (
-              <figure key={d.caption} data-detail className="opacity-0">
+              <figure key={d.caption} data-detail className={`opacity-0 ${layouts[i % layouts.length]}`}>
                 <div className="overflow-hidden">
                   <img
                     src={d.image}
