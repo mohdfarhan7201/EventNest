@@ -4,9 +4,9 @@ import { ArchiveGallery } from "@/components/home/ArchiveGallery";
 import { FinalInvitation } from "@/components/home/FinalInvitation";
 import { images } from "@/data/estate";
 
-const title = "Gallery — Event Nest";
+const title = "Gallery — Photos of Premium Banquet Hall | Event Nest Gorakhpur";
 const description =
-  "Explore the visual archive of Event Nest. See the stunning architecture of our grand banquet hall, elegant decor setups, and beautiful moments from the spectacular celebrations we host.";
+  "Explore the visual archive of Event Nest. See the stunning architecture of our grand banquet hall, elegant decor, and beautiful celebration moments.";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({

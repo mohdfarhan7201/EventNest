@@ -13,7 +13,7 @@ import { NearbyLocations } from "@/components/home/NearbyLocations";
 
 const title = "Event Nest — Premium Banquet Hall & Event Venue in Gorakhpur";
 const description =
-  "Welcome to Event Nest, Gorakhpur's most premium banquet hall and event venue. We offer elegant courtyards, lavish banquets, and top-tier hospitality for your grand celebrations.";
+  "Welcome to Event Nest, Gorakhpur's most premium banquet hall. We offer elegant courtyards and lavish banquets for your grand celebrations.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

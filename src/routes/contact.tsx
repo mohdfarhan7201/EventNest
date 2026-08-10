@@ -3,9 +3,9 @@ import { PageHero } from "@/components/site/PageHero";
 import { ContactSection } from "@/components/site/ContactSection";
 import { images } from "@/data/estate";
 
-const title = "Contact Us — Event Nest";
+const title = "Contact Event Nest — Book Premium Banquet Hall in Gorakhpur";
 const description =
-  "Ready to plan your next big event? Reach out to the dedicated management team at Event Nest Gorakhpur. Contact us today to book our premium banquet hall and start your celebration journey.";
+  "Ready to plan your next event? Reach out to the dedicated management team at Event Nest Gorakhpur to book our premium banquet hall today.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({

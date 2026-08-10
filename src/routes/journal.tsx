@@ -5,9 +5,9 @@ import { images, journal } from "@/data/estate";
 import { Section } from "@/components/site/Chapter";
 import { useGsapContext, revealImage, revealBlock } from "@/lib/anim";
 
-const title = "Journal — Event Nest";
+const title = "Journal — Latest Events & Updates | Event Nest Gorakhpur";
 const description =
-  "Stay updated with the latest happenings at Event Nest. Read about our beautifully hosted weddings, discover versatile decor setups, and find insights into making your event unforgettable.";
+  "Stay updated with Event Nest. Read about our beautifully hosted weddings, discover versatile decor setups, and find insights for unforgettable events.";
 
 export const Route = createFileRoute("/journal")({
   head: () => ({

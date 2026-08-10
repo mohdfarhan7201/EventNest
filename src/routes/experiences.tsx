@@ -4,9 +4,9 @@ import { ExperienceSection } from "@/components/home/ExperienceSection";
 import { FinalInvitation } from "@/components/home/FinalInvitation";
 import { images } from "@/data/estate";
 
-const title = "Experiences — Event Nest";
+const title = "Premium Experiences & Amenities | Event Nest Gorakhpur";
 const description =
-  "Discover the premium amenities at Event Nest. From our dedicated host spaces and lavish catering to impeccable guest support, we curate experiences designed for your utmost comfort and joy.";
+  "Discover premium amenities at Event Nest. From dedicated host spaces to impeccable guest support, we curate experiences for your utmost comfort and joy.";
 
 export const Route = createFileRoute("/experiences")({
   head: () => ({
