@@ -51,12 +51,11 @@ export const estate = {
 export const navItems = [
   { index: "01", label: "The Story", to: "/about", image: images.courtyard },
   { index: "02", label: "The Property", to: "/about", image: images.grandHall },
-  { index: "03", label: "Dining", to: "/dining", image: images.dining },
-  { index: "04", label: "Celebrations", to: "/celebrations", image: images.celebration },
-  { index: "05", label: "Experiences", to: "/experiences", image: images.terrace },
-  { index: "06", label: "Gallery", to: "/gallery", image: images.detailCarving },
-  { index: "07", label: "Journal", to: "/journal", image: images.garden },
-  { index: "08", label: "Contact", to: "/contact", image: images.heroEstate },
+  { index: "03", label: "Celebrations", to: "/celebrations", image: images.celebration },
+  { index: "04", label: "Experiences", to: "/experiences", image: images.terrace },
+  { index: "05", label: "Gallery", to: "/gallery", image: images.detailCarving },
+  { index: "06", label: "Journal", to: "/journal", image: images.garden },
+  { index: "07", label: "Contact", to: "/contact", image: images.heroEstate },
 ] as const;
 
 export type TimelineEntry = {
