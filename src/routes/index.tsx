@@ -36,13 +36,13 @@ function Index() {
   return (
     <>
       <Hero />
-      <StorySection />
+      <CelebrationSection />
       <HistoryTimeline />
       <ArchitectureSection />
       <RoomsScroller />
       <DetailsGallery />
       <DiningSection />
-      <CelebrationSection />
+      <StorySection />
       <ExperienceSection />
       <ArchiveGallery featuredOnly={true} />
       <TestimonialStory />

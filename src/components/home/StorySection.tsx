@@ -18,7 +18,7 @@ export function StorySection() {
   return (
     <Section labelledBy="story-heading" className="paper">
       <div ref={ref}>
-        <ChapterMark number="02" title="A Place With a Memory" />
+        <ChapterMark number="08" title="A Place With a Memory" />
 
         <div className="mt-14 grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20">
           <div className="flex flex-col gap-12 lg:pt-4">
