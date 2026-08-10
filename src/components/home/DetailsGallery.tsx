@@ -6,18 +6,38 @@ export function DetailsGallery() {
   const ref = useGsapContext<HTMLDivElement>(({ root, reduced }) => {
     const h = root.querySelector<HTMLElement>("[data-heading]");
     if (h) revealHeading(h, reduced);
-    root.querySelectorAll<HTMLElement>("[data-detail]").forEach((fig, i) => {
-      gsap.set(fig, { opacity: 1 });
-      if (reduced) return;
-      gsap.from(fig, {
+    
+    const figures = root.querySelectorAll<HTMLElement>("[data-detail]");
+    if (reduced) {
+      gsap.set(figures, { opacity: 1, clipPath: "inset(0%)", scale: 1 });
+      return;
+    }
+    
+    // Premium stagger reveal animation for the whole grid
+    gsap.fromTo(
+      figures,
+      {
+        clipPath: "inset(100% 0% 0% 0%)",
+        y: 40,
         opacity: 0,
-        y: 60,
-        duration: 1.1,
-        ease: "power3.out",
-        scrollTrigger: { trigger: fig, start: "top 90%" },
-        delay: (i % 2) * 0.1,
-      });
-      parallax(fig.querySelector("img"), reduced, 8 + (i % 3) * 5);
+      },
+      {
+        clipPath: "inset(0% 0% 0% 0%)",
+        y: 0,
+        opacity: 1,
+        duration: 1.6,
+        ease: "power4.out",
+        stagger: 0.15,
+        scrollTrigger: {
+          trigger: root.querySelector(".grid"),
+          start: "top 80%",
+        },
+      }
+    );
+
+    figures.forEach((fig, i) => {
+      // Gentle parallax on each image to keep it dynamic
+      parallax(fig.querySelector("img"), reduced, 8);
     });
   });
 
@@ -29,33 +49,29 @@ export function DetailsGallery() {
           It is in the details.
         </h2>
 
-        <div className="mt-12 grid gap-x-8 gap-y-12 sm:grid-cols-12">
-          {details.map((d, i) => {
-            const layouts = [
-              "sm:col-span-5 sm:col-start-1",
-              "sm:col-span-5 sm:col-start-7 sm:mt-12",
-              "sm:col-span-4 sm:col-start-2 sm:mt-4",
-              "sm:col-span-5 sm:col-start-7 sm:mt-8",
-            ];
-            return (
-              <figure key={d.caption} data-detail className={`opacity-0 ${layouts[i % layouts.length]}`}>
-                <div className="overflow-hidden">
-                  <img
-                    src={d.image}
-                    alt={d.caption}
-                    loading="lazy"
-                    width={1000}
-                    height={1200}
-                    className="aspect-[4/5] w-full scale-110 object-cover"
-                  />
-                </div>
-                <figcaption className="mt-4 flex items-baseline justify-between gap-4 border-t border-border pt-3">
-                  <span className="label">{d.caption}</span>
-                  <span className="label text-brass">{d.meta}</span>
-                </figcaption>
-              </figure>
-            );
-          })}
+        {/* Tight grid layout for less space, group for hover animations */}
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {details.map((d) => (
+            <figure key={d.caption} data-detail className="group opacity-0 relative overflow-hidden">
+              <div className="overflow-hidden">
+                <img
+                  src={d.image}
+                  alt={d.caption}
+                  loading="lazy"
+                  width={1000}
+                  height={1200}
+                  // Clean, square-ish aspect ratio with smooth hover zoom
+                  className="aspect-[4/5] w-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-110"
+                />
+              </div>
+              <figcaption className="mt-5 flex flex-col gap-1 border-t border-border/60 pt-4">
+                <span className="label font-medium">{d.caption}</span>
+                <span className="text-[10px] uppercase tracking-widest text-brass transition-colors duration-500 group-hover:text-black">
+                  {d.meta}
+                </span>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </Section>
