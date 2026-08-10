@@ -19,8 +19,8 @@ export function TestimonialStory() {
     if (!quoteRef.current || prefersReducedMotion()) return;
     const tween = gsap.fromTo(
       quoteRef.current.children,
-      { opacity: 0, y: 22 },
-      { opacity: 1, y: 0, duration: 0.8, stagger: 0.08, ease: "power2.out" },
+      { opacity: 0, x: -22 },
+      { opacity: 1, x: 0, duration: 0.8, stagger: 0.08, ease: "power2.out" },
     );
     return () => { tween.kill(); };
   }, [active]);
