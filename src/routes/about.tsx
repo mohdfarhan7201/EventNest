@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "@/components/site/PageHero";
-import { StorySection } from "@/components/home/StorySection";
 import { HistoryTimeline } from "@/components/home/HistoryTimeline";
 import { ArchitectureSection } from "@/components/home/ArchitectureSection";
 import { FinalInvitation } from "@/components/home/FinalInvitation";
@@ -47,7 +46,6 @@ function About() {
         image={images.grandHall}
         alt="The long hall of the estate lit by dusty afternoon light"
       />
-      <StorySection />
       <HistoryTimeline />
       <ArchitectureSection />
       <FinalInvitation />
