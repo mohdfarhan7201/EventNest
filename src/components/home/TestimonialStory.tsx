@@ -57,7 +57,7 @@ export function TestimonialStory() {
         <div data-fade><ChapterMark number="11" title="Voices of Our Guests" /></div>
         <h2 id="voices-heading" className="sr-only">What guests have said</h2>
 
-        <div ref={quoteRef} className="mt-14 max-w-4xl min-h-[220px] sm:min-h-[260px]">
+        <div ref={quoteRef} className="mt-14 max-w-4xl min-h-[350px] sm:min-h-[280px] md:min-h-[250px]">
           <blockquote className="display text-[1.9rem] leading-[1.18] text-ivory sm:text-[3.4rem]">
             “{t.quote}”
           </blockquote>
