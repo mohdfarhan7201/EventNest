@@ -82,9 +82,11 @@ export function Nav() {
           <div className="flex items-center flex-1">
              {/* Desktop Links */}
              <div className="hidden lg:flex items-center gap-8 text-[11px] font-semibold tracking-[0.15em] uppercase">
+                <Link to="/" className="hover:opacity-60 transition-opacity">Home</Link>
                 <Link to="/about" className="hover:opacity-60 transition-opacity">About</Link>
                 <Link to="/experiences" className="hover:opacity-60 transition-opacity">Experience</Link>
                 <Link to="/gallery" className="hover:opacity-60 transition-opacity">Gallery</Link>
+                <Link to="/contact" className="hover:opacity-60 transition-opacity">Contact</Link>
              </div>
              {/* Mobile Menu Button */}
              <button
