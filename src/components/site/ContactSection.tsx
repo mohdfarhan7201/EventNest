@@ -58,7 +58,7 @@ export function ContactSection({ chapter }: { chapter?: string }) {
           <span className="label">Contact the venue</span>
         </div>
 
-        <h2 id="contact-heading" data-heading className="display anim-hidden mt-8 max-w-3xl text-[2.6rem] leading-[1.02] sm:text-[4.4rem]">
+        <h2 id="contact-heading" data-heading className="display mt-8 max-w-3xl text-[2.6rem] leading-[1.02] sm:text-[4.4rem]">
           Tell us when, and we will prepare the venue.
         </h2>
 

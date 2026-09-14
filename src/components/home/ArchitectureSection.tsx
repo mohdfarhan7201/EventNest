@@ -25,7 +25,7 @@ export function ArchitectureSection() {
         <ChapterMark number="04" title="The Venue" />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_auto] lg:items-end">
-          <h2 id="house-heading" data-heading className="display anim-hidden max-w-3xl text-[2.6rem] leading-[1.02] sm:text-[4.2rem]">
+          <h2 id="house-heading" data-heading className="display max-w-3xl text-[2.6rem] leading-[1.02] sm:text-[4.2rem]">
             Explore the spaces designed for your grandest events.
           </h2>
           <p data-fade className="label lg:pb-3">Spaces 01 — 05</p>

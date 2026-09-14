@@ -14,7 +14,6 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { Cursor } from "@/components/site/Cursor";
-import { Preloader } from "@/components/site/Preloader";
 import { SmoothScroll } from "@/components/site/SmoothScroll";
 import { PageTransition } from "@/components/site/PageTransition";
 import { estate } from "@/data/estate";
@@ -164,7 +163,6 @@ function RootComponent() {
         Skip to content
       </a>
       <SmoothScroll />
-      <Preloader />
       <Nav />
       <Cursor />
       <PageTransition />

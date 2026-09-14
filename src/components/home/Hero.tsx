@@ -55,8 +55,8 @@ export function Hero() {
         <p data-hero-meta className="label text-brass">Chapter 01 — The Arrival</p>
 
         <h1 className="display mt-6 text-[3.1rem] leading-[0.92] sm:text-[6rem] lg:text-[8rem]">
-          <span data-line="1" className="anim-hidden block overflow-hidden">A legacy</span>
-          <span data-line="2" className="anim-hidden block overflow-hidden italic text-cream">worth arriving for</span>
+          <span data-line="1" className="block overflow-hidden">A legacy</span>
+          <span data-line="2" className="block overflow-hidden italic text-cream">worth arriving for</span>
         </h1>
 
         <div className="mt-10 grid gap-8 sm:grid-cols-[auto_1fr_auto] sm:items-end">

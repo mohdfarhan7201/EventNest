@@ -16,7 +16,7 @@ export function ExperienceSection() {
     <Section labelledBy="experiences-heading">
       <div ref={ref}>
         <ChapterMark number="09" title="Experiences" />
-        <h2 id="experiences-heading" data-heading className="display anim-hidden mt-8 max-w-3xl text-[2.6rem] leading-[1.02] sm:text-[4.4rem]">
+        <h2 id="experiences-heading" data-heading className="display mt-8 max-w-3xl text-[2.6rem] leading-[1.02] sm:text-[4.4rem]">
           Experiences curated for your comfort and joy.
         </h2>
 

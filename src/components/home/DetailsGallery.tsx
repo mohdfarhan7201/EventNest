@@ -34,7 +34,7 @@ export function DetailsGallery() {
     <Section labelledBy="details-heading" className="paper">
       <div ref={ref}>
         <ChapterMark number="06" title="The Details" />
-        <h2 id="details-heading" data-heading className="display anim-hidden mt-8 max-w-2xl text-[2.6rem] leading-[1.02] sm:text-[4.4rem]">
+        <h2 id="details-heading" data-heading className="display mt-8 max-w-2xl text-[2.6rem] leading-[1.02] sm:text-[4.4rem]">
           It is in the details.
         </h2>
 

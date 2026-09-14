@@ -1,5 +1,5 @@
 import Lenis from "lenis";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useRouterState } from "@tanstack/react-router";
 import { gsap, ScrollTrigger, registerGsap, prefersReducedMotion } from "@/lib/anim";
 
@@ -9,6 +9,7 @@ import { gsap, ScrollTrigger, registerGsap, prefersReducedMotion } from "@/lib/a
  */
 export function SmoothScroll() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
     if (prefersReducedMotion()) return;
@@ -19,6 +20,7 @@ export function SmoothScroll() {
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       touchMultiplier: 1.4,
     });
+    lenisRef.current = lenis;
 
     lenis.on("scroll", ScrollTrigger.update);
     const tick = (time: number) => lenis.raf(time * 1000);
@@ -29,13 +31,22 @@ export function SmoothScroll() {
     return () => {
       gsap.ticker.remove(tick);
       lenis.destroy();
+      lenisRef.current = null;
     };
   }, []);
 
   useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    }
     window.scrollTo(0, 0);
-    const id = window.setTimeout(() => ScrollTrigger.refresh(), 120);
-    return () => window.clearTimeout(id);
+    ScrollTrigger.refresh();
+    const t1 = window.setTimeout(() => ScrollTrigger.refresh(), 80);
+    const t2 = window.setTimeout(() => ScrollTrigger.refresh(), 250);
+    return () => {
+      window.clearTimeout(t1);
+      window.clearTimeout(t2);
+    };
   }, [pathname]);
 
   return null;

@@ -69,8 +69,21 @@ export function Footer() {
         </div>
 
         <div className="mt-20 pt-8 border-t border-white/10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between text-xs text-gray-500">
-          <p className="text-center sm:text-left">© {new Date().getFullYear()} {estate.name}. All rights reserved.</p>
-          <p className="text-center sm:text-right">Premium Banquet Hall & Event Venue — Gorakhpur, India</p>
+          <div>
+            <p className="text-center sm:text-left">© {new Date().getFullYear()} {estate.name}. All rights reserved.</p>
+            <p className="mt-1 text-center sm:text-left text-[11px] text-gray-500">Premium Banquet Hall & Event Venue — Gorakhpur, India</p>
+          </div>
+          <p className="text-center sm:text-right">
+            Developed by{" "}
+            <a
+              href="https://shineinfosolutions.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#d4b06e] hover:underline font-medium transition-colors"
+            >
+              Shine Infosolutions
+            </a>
+          </p>
         </div>
       </div>
     </footer>

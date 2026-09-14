@@ -53,7 +53,7 @@ export function ArchiveGallery({ heading = "The archive", chapter = "10" as stri
     <Section labelledBy="archive-heading" id="archive">
       <div ref={ref}>
         {chapter && <ChapterMark number={chapter} title="The Archive" />}
-        <h2 id="archive-heading" data-heading className="display anim-hidden mt-8 text-[2.8rem] leading-none sm:text-[5rem]">
+        <h2 id="archive-heading" data-heading className="display mt-8 text-[2.8rem] leading-none sm:text-[5rem]">
           {heading}
         </h2>
 

@@ -47,11 +47,14 @@ export function useGsapContext<T extends HTMLElement>(
 
 /** Split an element's text into word spans (each wrapped for masked reveal). */
 export function splitWords(el: HTMLElement): HTMLElement[] {
-  if (el.dataset["split"] === "true") {
-    return Array.from(el.querySelectorAll<HTMLElement>("[data-word]"));
-  }
-  const words = (el.textContent ?? "").split(/\s+/).filter(Boolean);
-  el.textContent = "";
+  const text = el.textContent?.trim() ?? "";
+  if (!text) return [];
+
+  // Reset content to create fresh word spans
+  el.innerHTML = "";
+  el.dataset["split"] = "true";
+
+  const words = text.split(/\s+/).filter(Boolean);
   const nodes: HTMLElement[] = [];
   words.forEach((word, i) => {
     const mask = document.createElement("span");
@@ -67,7 +70,6 @@ export function splitWords(el: HTMLElement): HTMLElement[] {
     if (i < words.length - 1) el.appendChild(document.createTextNode(" "));
     nodes.push(inner);
   });
-  el.dataset["split"] = "true";
   return nodes;
 }
 
@@ -76,14 +78,23 @@ export function revealHeading(el: HTMLElement, reduced: boolean) {
   el.classList.remove("anim-hidden");
   if (reduced) return;
   const words = splitWords(el);
-  gsap.set(words, { yPercent: 110 });
-  gsap.to(words, {
-    yPercent: 0,
-    duration: 1.1,
-    ease: "power3.out",
-    stagger: 0.055,
-    scrollTrigger: { trigger: el, start: "top 85%" },
-  });
+  if (!words.length) return;
+
+  gsap.fromTo(
+    words,
+    { yPercent: 110 },
+    {
+      yPercent: 0,
+      duration: 1.0,
+      ease: "power3.out",
+      stagger: 0.05,
+      scrollTrigger: {
+        trigger: el,
+        start: "top 92%",
+        once: true,
+      },
+    },
+  );
 }
 
 /** Fade-and-rise for supporting content. */
